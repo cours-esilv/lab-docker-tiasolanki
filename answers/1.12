@@ -1,1 +1,2 @@
+docker run -d --name backend-container --network my-network tiasolanki/backend-image
 docker run -d --name frontend-container -e BACKEND_URL=http://backend-container:5000 tiasolanki/front-image
