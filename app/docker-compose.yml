@@ -2,13 +2,13 @@ version: '3'
 services:
   backend-container:
     image: tiasolanki/myapp
-    ports:
-      - "5000:5000"
     environment:
       DATABASE_URL: "your_database_connection_string"
+    #volumes:
+    #  - backend-data:/usr/src/app
   frontend-container:
     image: tiasolanki/front-image
     ports:
-      - "8082:80" 
+      - "8082:80"
     environment:
       BACKEND_URL: "http://backend-container:5000"
